@@ -1,7 +1,7 @@
 #include <WiFiEspAT.h>
 
 char ssid[] = "your-ssid";
-char password[] = "your-passwordword";
+char password[] = "your-password";
 
 WiFiClient client;
 
