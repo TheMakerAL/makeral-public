@@ -1,3 +1,9 @@
+/**
+ * Basic WiFi connection using WiFiEsp library.
+ * 
+ * by MakerAL.com 2020.
+ */
+
 #include "WiFiEsp.h"
 
 char ssid[] = "your-ssid";
@@ -17,7 +23,7 @@ void setup() {
     Serial.println("Connecting to WiFi");
     WiFi.begin(ssid, password);
   }
-  Serial.println("Connected to WiFi");
+  Serial.println("Connected to WiFi...");
 
   // Print status
   printWifiStatus();

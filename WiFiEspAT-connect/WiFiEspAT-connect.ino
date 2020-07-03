@@ -1,3 +1,9 @@
+/**
+ * Basic WiFi connection using WiFiEspAT library.
+ * 
+ * by MakerAL.com 2020.
+ */
+
 #include "WiFiEspAT.h"
 
 char ssid[] = "your-ssid";
@@ -10,14 +16,14 @@ void setup() {
   Serial.begin(115200);
   // Serial for ESP8266 communication
   Serial3.begin(115200);
-  WiFi.init(Serial3);
+  WiFi.init(&Serial3);
 
   // Connect to WiFi
   while (WiFi.status() != WL_CONNECTED) {
     Serial.println("Connecting to WiFi");
     WiFi.begin(ssid, password);
   }
-  Serial.println("Connected to WiFi");
+  Serial.println("Connected to WiFi...");
 
   // Print status
   printWifiStatus();
